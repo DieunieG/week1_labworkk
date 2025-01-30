@@ -1,16 +1,52 @@
 package org.example;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {//TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class Vehicle {
+    private int numberOfWheels;
+    private String color;
+    private float engineSize;
+    private String fuelType;
+    public Vehicle ( int numberOfWheels, String color, float engineSize, String fuelType ) {
+        this.numberOfWheels = numberOfWheels;
+        this.color = color;
+        this.engineSize = engineSize;
+        this.fuelType = fuelType;
+    }
+    public int getNumberOfWheels() {
+        return numberOfWheels;
+    }
+public String getColor() {
+        return color;
+   }
+public float getEngineSize() {
+        return engineSize;
+}
+public String getFuelType() {
+        return fuelType;
+}
+   public void setNumberOfWheels(int numberOfWheels) {
+        this.numberOfWheels = numberOfWheels;
         }
+        public void setColor(String color) {
+        this.color = color;
+        }
+        public void setEngineSize(float engineSize) {
+        this.engineSize = engineSize;
+        }
+        public void setFuelType(String fuelType) {
+        this.fuelType = fuelType;
+        }
+        public void display() {
+        System.out.println("Vehicle info");
+        System.out.println("Number of wheels: " + numberOfWheels);
+        System.out.println("Color: " + color);
+        System.out.println("Engine size: " + engineSize);
+        System.out.println("Fuel type: " + fuelType);
+        public static void main(String[] args){
+            Vehicle car = new Vehicle(10,"pink", 6.1f, "regular");
+            car.display();
+        }
+    }
+    public class Car extends Vehicle{
+    private String model;
+    private String brand;
     }
 }
