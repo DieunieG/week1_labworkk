@@ -39,14 +39,10 @@ public String getFuelType() {
         System.out.println("Number of wheels: " + numberOfWheels);
         System.out.println("Color: " + color);
         System.out.println("Engine size: " + engineSize);
-        System.out.println("Fuel type: " + fuelType);
+        System.out.println("Fuel type: " + fuelType);}
         public static void main(String[] args){
             Vehicle car = new Vehicle(10,"pink", 6.1f, "regular");
             car.display();
         }
     }
-    public class Car extends Vehicle{
-    private String model;
-    private String brand;
-    }
-}
+
